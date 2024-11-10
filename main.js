@@ -4,11 +4,10 @@ const clock_interval = setInterval(function()
 {
     var date = new Date(Date.now());
     var start = "";
-    if (date.getMinutes() < 10)
-        {
-            mid = "0"
-        }
-    var mid = ":";
+    if (date.getHours() < 10)
+    {
+        start = "0"
+    }
     var mid = ":";
     if (date.getMinutes() < 10)
     {
