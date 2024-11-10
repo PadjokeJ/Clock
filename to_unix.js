@@ -1,3 +1,7 @@
+const type_sel = document.getElementById("discord_type");
+type_sel.style.display = "none";
+
+
 const timeControl = document.querySelector('input[type="datetime-local"]');
 var date = new Date(Date.now());
 var sep = ":"
@@ -11,7 +15,33 @@ var mns = date.getMinutes();
 
 timeControl.value = yr + "-" + mth + "-" + day + "T" + hrs + sep + mns;
 
+var unix_value;
+var discord_type = ":R";
+
+type_sel.addEventListener("change", function(){
+    discord_type = type_sel.value;
+    console.log(type_sel.value);
+});
+
 timeControl.addEventListener("input", function(){
     target = document.getElementById("target_timestamp");
-    document.getElementById("target_timestamp").innerHTML = Math.floor(new Date(timeControl.value).getTime() / 1000);
+    unix_value = Math.floor(new Date(timeControl.value).getTime() / 1000);
+    document.getElementById("target_timestamp").innerHTML = "Click here to copy timestamp";
+    type_sel.style.display = "block";
+});
+
+const unix_element = document.getElementById("target_timestamp");
+unix_element.addEventListener("click", function(){
+    navigator.clipboard.writeText("<t:"+unix_value+discord_type+">");
+    unix_element.classList.toggle("clicked");
+    
+    var indicator = document.getElementById("unix_indicator");
+    indicator.innerText = "Copied!";
+
+    
+    
+    setTimeout( function(){
+        unix.classList.toggle("clicked");
+        indicator.innerText = "";
+    }, 1000);
 });

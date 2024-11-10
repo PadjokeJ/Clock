@@ -15,8 +15,21 @@
             <p id="clock">00:00</p>
             <p id="timestamp">unix</p>
             <p id="indicator"></p>
-            <p><input type="datetime-local"></p>
+            <br>
+            <h4>Discord timestamp</h4>
+            <div style="align-items: center;">
+                <p><input type="datetime-local"></p> 
+                <select name="Type" id="discord_type">
+                    <option value=":R">Relative</option>
+                    <option value=":t">Short time</option>
+                    <option value=":T">Long time</option>
+                    <option value=":d">Short date</option>
+                    <option value=":D">Long date</option>
+                </select>
+            </div>
             <p id="target_timestamp"></p>
+            <p id="unix_indicator"></p>
+            
         </div>
         
         <script src="main.js"></script>

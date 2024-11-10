@@ -59,6 +59,13 @@ body{
     color:rgb(15, 84, 175);
 }
 
+.content #target_timestamp{
+    transition: color 1s ease;
+}
+.content #target_timestamp:hover{
+    color:rgb(15, 84, 175);
+}
+
 .clicked{
     animation: color_change 1s ease-in-out;
 }
