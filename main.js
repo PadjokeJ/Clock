@@ -23,7 +23,12 @@ const unix = document.getElementById("timestamp");
 unix.addEventListener("click", function(){
     navigator.clipboard.writeText(Math.round(Date.now() / 1000));
     unix.classList.toggle("clicked");
+    
+    var indicator = document.getElementById("indicator");
+    indicator.innerText = "Copied!";
+    
     setTimeout( function(){
         unix.classList.toggle("clicked");
+        indicator.innerText = "";
     }, 1000);
 });

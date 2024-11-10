@@ -4,12 +4,14 @@
     :root{
         --text_color: aliceblue;
         --bg_color: black;
+        --timestamp_color: aliceblue;
     }
 }
 @media (prefers-color-scheme: light)
 {
     :root{
         --text_color: black;
+        --timestamp_color: black;
         --bg_color: aliceblue;
     }
 }
@@ -20,6 +22,8 @@ html, body{
     margin: 0;
     display: flex;
     flex-direction: column;
+
+    transition: color 1s;
 }
 
 body{
@@ -36,6 +40,7 @@ body{
 .content
 {
     flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,26 +49,18 @@ body{
 
 .content p{
     margin: 0;
-    padding: 0;
+    padding: 2px;
 }
 
 .content #timestamp{
     transition: color 1s ease;
 }
+.content #timestamp:hover{
+    color:rgb(15, 84, 175);
+}
 
 .clicked{
     animation: color_change 1s ease-in-out;
-}
-
-@keyframes color_change{
-    0% {color:var(--text_color);}
-    50% {color:blue};
-    100% {color:var(--text_color);}
-}
-
-@keyframes select_color{
-    0% {color:var(--text_color)};
-    100% {color:blue}
 }
 
 .content #clock
