@@ -37,9 +37,9 @@ unix.addEventListener("click", function(){
 function tofs(){
     console.log("fullscreen event triggered");
     if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement){
-        document.getElementById("hide_on_fullscreen").display = "none";
+        document.getElementById("hide_on_fullscreen").style.display = "none";
     } else{
-        document.getElementById("hide_on_fullscreen").display = "block";
+        document.getElementById("hide_on_fullscreen").style.display = "block";
     }
 }
 
