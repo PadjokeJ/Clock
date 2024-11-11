@@ -1,6 +1,7 @@
 const type_sel = document.getElementById("discord_type");
 type_sel.style.display = "none";
 
+document.getElementById("target_timestamp").style.display = "none";
 
 const timeControl = document.querySelector('input[type="datetime-local"]');
 var date = new Date(Date.now());
@@ -34,6 +35,7 @@ timeControl.addEventListener("input", function(){
     unix_value = Math.floor(new Date(timeControl.value).getTime() / 1000);
     document.getElementById("target_timestamp").innerHTML = "Click here to copy timestamp";
     type_sel.style.display = "block";
+    document.getElementById("target_timestamp").style.display = "flex";
 });
 
 const unix_element = document.getElementById("target_timestamp");
