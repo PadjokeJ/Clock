@@ -43,10 +43,10 @@ function tofs(){
     }
 }
 
-document.addEventListener("fullscreenchange", tofs());
+document.addEventListener("fullscreenchange", tofs);
 
-document.addEventListener("mozfullscreenchange", tofs());
+document.addEventListener("mozfullscreenchange", tofs);
 
-document.addEventListener("webkitfullscreenchange", tofs());
+document.addEventListener("webkitfullscreenchange", tofs);
 
-document.addEventListener("msfullscreenchange", tofs());
+document.addEventListener("msfullscreenchange", tofs);
