@@ -9,7 +9,7 @@ var sep = ":"
 
 
 var yr = date.getFullYear();
-var mth = date.getMonth();
+var mth = date.getMonth() + 1;
 var day = date.getDate();
 var hrs = date.getHours();
 if (hrs < 10){
@@ -19,6 +19,13 @@ var mns = date.getMinutes();
 if (mns < 10){
     mns = "0"+mns;
 }
+if (day < 10){
+    day = "0"+day;
+}
+if (mth < 10){
+    mth = "0"+mth;
+}
+
 
 timeControl.value = yr + "-" + mth + "-" + day + "T" + hrs + sep + mns;
 
