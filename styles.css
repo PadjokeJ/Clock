@@ -103,4 +103,6 @@ input{
     border-radius: 5px;
     padding: 5px;
     box-shadow: none;
+    font-family: sans-serif;
+    text-align: start;
 }
