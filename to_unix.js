@@ -11,7 +11,13 @@ var yr = date.getFullYear();
 var mth = date.getMonth();
 var day = date.getDate();
 var hrs = date.getHours();
+if (hrs < 10){
+    hrs = "0"+hrs;
+}
 var mns = date.getMinutes();
+if (mns < 10){
+    mns = "0"+mns;
+}
 
 timeControl.value = yr + "-" + mth + "-" + day + "T" + hrs + sep + mns;
 
