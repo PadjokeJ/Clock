@@ -34,11 +34,19 @@ unix.addEventListener("click", function(){
     }, 1000);
 });
 
-document.onfullscreenchange = function(event){
+function tofs(){
+    console.log("fullscreen event triggered");
     if (document.fullscreenElement){
         document.getElementByClassName("hide_on_fullscreen").display = "none";
     } else{
         document.getElementByClassName("hide_on_fullscreen").display = "block";
     }
 }
-        
+
+document.addEventListener("fullscreenchange", tofs());
+
+document.addEventListener("mozfullscreenchange", tofs());
+
+document.addEventListener("webkitfullscreenchange", tofs());
+
+document.addEventListener("msfullscreenchange", tofs());
