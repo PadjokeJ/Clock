@@ -110,3 +110,12 @@ input{
     font-family: sans-serif;
     text-align: start;
 }
+
+.footer_bottom{
+    padding: 15px 0 5px;
+}
+
+#fullscreen_button{
+    padding: 20px;
+    cursor: pointer;
+}

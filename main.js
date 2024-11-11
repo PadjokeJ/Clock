@@ -1,5 +1,4 @@
-
-
+const fsbutton = document.getElementById("fullscreen_button");
 const clock_interval = setInterval(function() 
 {
     var date = new Date(Date.now());
@@ -38,8 +37,17 @@ function tofs(){
     console.log("fullscreen event triggered");
     if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement){
         document.getElementById("hide_on_fullscreen").style.display = "none";
+        fsbutton.src = "img/exitfs.svg";
+        fsbutton.addEventListener("click", function(){
+            document.exitFullscreen();
+        });
+
     } else{
         document.getElementById("hide_on_fullscreen").style.display = "block";
+        fsbutton.src = "img/fullscreen.svg";
+        fsbutton.addEventListener("click", function(){
+            document.documentElement.requestFullscreen();
+        });
     }
 }
 
@@ -50,3 +58,8 @@ document.addEventListener("mozfullscreenchange", tofs);
 document.addEventListener("webkitfullscreenchange", tofs);
 
 document.addEventListener("msfullscreenchange", tofs);
+
+
+fsbutton.addEventListener("click", function(){
+    document.documentElement.requestFullscreen();
+});
