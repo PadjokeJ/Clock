@@ -31,6 +31,10 @@ body{
     background-color: var(--bg_color);
 }
 
+h2{
+    font-size: 1.25em;
+}
+
 
 #page-title
 {
