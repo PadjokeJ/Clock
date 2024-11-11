@@ -96,6 +96,8 @@ select{
 input{
     color: var(--text_color);
     background-color: var(--bg_color);
+    border-color: var(--text_color);
+    border-style: solid;
     border-radius: 5px;
     padding: 5px;
     box-shadow: none;
