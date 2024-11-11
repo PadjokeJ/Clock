@@ -33,3 +33,12 @@ unix.addEventListener("click", function(){
         indicator.innerText = "";
     }, 1000);
 });
+
+document.onfullscreenchange = function(event){
+    if (document.fullscreenElement){
+        document.getElementByClassName("hide_on_fullscreen").display = "none";
+    } else{
+        document.getElementByClassName("hide_on_fullscreen").display = "block";
+    }
+}
+        
