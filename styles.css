@@ -5,6 +5,9 @@
         --text_color: aliceblue;
         --bg_color: black;
         --timestamp_color: aliceblue;
+
+        --calendar_icon_url: url("img/calendar_white.svg");
+
     }
 }
 @media (prefers-color-scheme: light)
@@ -13,6 +16,8 @@
         --text_color: black;
         --timestamp_color: black;
         --bg_color: aliceblue;
+
+        --calendar_icon_url: url("img/calendar_black.svg");
     }
 }
 
@@ -109,6 +114,10 @@ input{
     box-shadow: none;
     font-family: sans-serif;
     text-align: start;
+}
+
+::-webkit-calendar-picker-indicator{
+    background-image: var(--calendar_icon_url);
 }
 
 .footer_bottom{
