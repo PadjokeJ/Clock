@@ -30,7 +30,7 @@ if (mth < 10){
 timeControl.value = yr + "-" + mth + "-" + day + "T" + hrs + sep + mns;
 
 var unix_value;
-var discord_type = ":R";
+var discord_type = "";
 
 type_sel.addEventListener("change", function(){
     discord_type = type_sel.value;
