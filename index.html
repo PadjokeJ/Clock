@@ -32,11 +32,14 @@
                 <div style="align-items: center;">
                     <p><input type="datetime-local" name="datetime" id="datetime"></p> 
                     <select name="Type" id="discord_type">
+                        <option value="">Default</option>
                         <option value=":R">Relative</option>
                         <option value=":t">Short time</option>
                         <option value=":T">Long time</option>
                         <option value=":d">Short date</option>
                         <option value=":D">Long date</option>
+                        <option value=":f">Short date & time</option>
+                        <option value=":F">Long date & time</option>
                     </select>
                 </div>
                 <p id="target_timestamp"></p>
